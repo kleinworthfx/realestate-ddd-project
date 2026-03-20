@@ -1,9 +1,9 @@
 /* IRepository.java
    Generic repository interface with abstraction
    Author: Paul Khumalo (230108547)
-   Date: 20 March 2026
+   Date: 13 March 2026
 */
-package realestate.repository;
+package za.ac.cput.realestate.repository;
 
 import java.util.List;
 

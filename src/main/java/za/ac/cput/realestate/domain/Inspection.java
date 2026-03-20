@@ -3,7 +3,7 @@
    Author: Paul Khumalo (230108547)
    Date: 12 March 2026
 */
-package realestate.domain;
+package za.ac.cput.realestate.domain;
 
 import java.time.LocalDateTime;
 

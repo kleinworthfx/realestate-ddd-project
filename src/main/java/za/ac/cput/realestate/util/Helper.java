@@ -3,7 +3,7 @@
    Author: Paul Khumalo (230108547)
    Date: 10 March 2026
 */
-package realestate.util;
+package za.ac.cput.realestate.util;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
