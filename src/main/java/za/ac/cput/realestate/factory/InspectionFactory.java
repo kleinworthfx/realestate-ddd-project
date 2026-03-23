@@ -1,6 +1,6 @@
 /* InspectionFactory.java
    Factory for creating Inspection objects
-   Author: Team Lead (230108547)
+   Author: Paul Khumalo (230108547)
    Date: 15 March 2026
 */
 package za.ac.cput.realestate.factory;
