@@ -1,8 +1,8 @@
 /*
 Property.Java
-property Repository class
+property model class
 Author: Francine Mulangu Kasongo 230978649
-26/03/2026
+2/03/2026
  */
 package za.ac.cput.realestate.repository.impl;
 
