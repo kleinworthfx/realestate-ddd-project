@@ -1,6 +1,7 @@
 /* Viewing.java
    Viewing model class using Builder Pattern
-   Author: Member 4 (220000004)
+   Name: Mfanafuthi khumalo
+  Student Number:230018270
    Date: 12 March 2026
 */
 package za.ac.cput.realestate.domain;
