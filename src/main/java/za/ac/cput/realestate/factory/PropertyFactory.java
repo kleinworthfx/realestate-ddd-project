@@ -8,45 +8,59 @@ Author: Francine Mulangu Kasongo 230978649
 package za.ac.cput.realestate.factory;
 
 import za.ac.cput.realestate.domain.Property;
+import za.ac.cput.realestate.util.Helper;
 
 public class PropertyFactory {
-    public static Property createProperty(String propertyId,
-                                          String address,
-                                          double price,
-                                          double kitchen,
-                                          double garage,
-                                          int bedrooms,
-                                          double bathrooms,
-                                          String propertyType,
+
+    public static Property createProperty(String propertyId, String address,
+                                          double price, int bedrooms,
+                                          double bathrooms, String propertyType,
                                           String status) {
+
+        if (Helper.isNullOrEmpty(propertyId) ||
+                Helper.isNullOrEmpty(address) ||
+                !Helper.isPositive(price) ||
+                !Helper.isPositive(bedrooms) ||
+                !Helper.isPositive(bathrooms) ||
+                Helper.isNullOrEmpty(propertyType) ||
+                Helper.isNullOrEmpty(status)) {
+            return null;
+        }
+
         return new Property.Builder()
-                .propertyId(propertyId)
-                .address(address)
-                .price(price)
-                .kitchen(kitchen)
-                .garage(garage)
-                .bedrooms(bedrooms)
-                .bathrooms(bathrooms)
-                .propertyType(propertyType)
-                .status(status)
+                .setPropertyId(propertyId)
+                .setAddress(address)
+                .setPrice(price)
+                .setBedrooms(bedrooms)
+                .setBathrooms(bathrooms)
+                .setPropertyType(propertyType)
+                .setStatus(status)
                 .build();
     }
 
-    public static Property  createBasicProperty(String propertyId,
-                                                String address,
-                                                double price){
+    public static Property createProperty(String address, double price,
+                                          int bedrooms, double bathrooms,
+                                          String propertyType, String status) {
+
+        if (Helper.isNullOrEmpty(address) ||
+                !Helper.isPositive(price) ||
+                !Helper.isPositive(bedrooms) ||
+                !Helper.isPositive(bathrooms) ||
+                Helper.isNullOrEmpty(propertyType) ||
+                Helper.isNullOrEmpty(status)) {
+            return null;
+        }
+
+        String propertyId = Helper.generateId();
+
         return new Property.Builder()
-                .propertyId(propertyId)
-                .address(address)
-                .price(price)
-                .bedrooms(0)
-                .garage(0.0)
-                .kitchen(0.0)
-                .bedrooms(0)
-                .bathrooms(0.0)
-                .propertyType("Unknown")
-                .Status("Available")
+                .setPropertyId(propertyId)
+                .setAddress(address)
+                .setPrice(price)
+                .setBedrooms(bedrooms)
+                .setBathrooms(bathrooms)
+                .setPropertyType(propertyType)
+                .setStatus(status)
                 .build();
     }
-
 }
