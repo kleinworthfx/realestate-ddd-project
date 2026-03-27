@@ -8,44 +8,76 @@ package za.ac.cput.realestate.domain;
 
 
 public class Property {
+
+
+    private double price;
     private String propertyId;
     private String address;
-    private double price;
-    private int bedrooms;
-    private double bathrooms;
     private String propertyType;
     private String status;
+    private int bedrooms;
+    public double kitchen;
+    private double bathrooms;
+    private double garage;
 
-    private Property(Builder builder) {
+
+    private Property(Client.Builder builder) {
         this.propertyId = builder.propertyId;
         this.address = builder.address;
-        this.price = builder.price;
         this.bedrooms = builder.bedrooms;
         this.bathrooms = builder.bathrooms;
         this.propertyType = builder.propertyType;
         this.status = builder.status;
+        this.kitchen = builder.kitchen;
+        this.garage = builder.garage;
+        this.price = builder.price;
     }
 
-    // Getters
-    public String getPropertyId() { return propertyId; }
-    public String getAddress() { return address; }
-    public double getPrice() { return price; }
-    public int getBedrooms() { return bedrooms; }
-    public double getBathrooms() { return bathrooms; }
-    public String getPropertyType() { return propertyType; }
-    public String getStatus() { return status; }
+    public Property(Builder builder) {
+    }
 
-    @Override
-    public String toString() {
-        return "Property{" +
-                "propertyId='" + propertyId + '\'' +
-                ", address='" + address + '\'' +
-                ", price=" + price +
-                ", bedrooms=" + bedrooms +
-                ", bathrooms=" + bathrooms +
-                ", propertyType='" + propertyType + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+    public String getPropertyID() {
+        return propertyId;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getGarage() {
+        return garage;
+    }
+
+    public int getBedrooms() {
+        return bedrooms;
+    }
+
+    public String getPropertyType() {
+        return propertyType;
+    }
+
+    public double getBathrooms() {
+        return bathrooms;
+    }
+
+    public double getKitchen() {
+        return kitchen;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Builder kitchen(double v) {
+        return null;
+    }
+
+    public String getPropertyId() {
+        return null;
     }
 
     public static class Builder {
@@ -56,55 +88,92 @@ public class Property {
         private double bathrooms;
         private String propertyType;
         private String status;
+        private double kitchen;
+        public String garage;
 
-        public Builder setPropertyId(String propertyId) {
+        public Builder propertyId(String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setPrice(double price) {
+        public Builder price(double price) {
             this.price = price;
             return this;
         }
 
-        public Builder setBedrooms(int bedrooms) {
+        public Builder bedrooms(int bedrooms) {
             this.bedrooms = bedrooms;
             return this;
         }
 
-        public Builder setBathrooms(double bathrooms) {
-            this.bathrooms = bathrooms;
-            return this;
-        }
-
-        public Builder setPropertyType(String propertyType) {
+        public Builder propertyType(String propertyType) {
             this.propertyType = propertyType;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder bathrooms(double bathrooms) {
+            this.bathrooms = bathrooms;
+            return this;
+        }
+
+        public Builder Status(String status) {
             this.status = status;
             return this;
         }
 
-        public Builder copy(Property property) {
-            this.propertyId = property.propertyId;
-            this.address = property.address;
-            this.price = property.price;
-            this.bedrooms = property.bedrooms;
-            this.bathrooms = property.bathrooms;
-            this.propertyType = property.propertyType;
-            this.status = property.status;
+        public Builder bedrooms(double bathrooms) {
+            this.bathrooms = bathrooms;
+            return this;
+        }
+
+        public Builder kitchen(double kitchen) {
+            this.kitchen = kitchen;
+            return this;
+        }
+
+        public Builder gargage(String garage) {
+            this.garage = garage;
             return this;
         }
 
         public Property build() {
+            if (propertyId == null || propertyId.isEmpty()) {
+                throw new IllegalArgumentException("PROPERTY ID IS NEEDED");
+
+            }
+            if (address == null || address.isEmpty()) {
+                throw new IllegalArgumentException("ADDRESS IS NEEDED");
+            }
+            if (price <= 0) {
+                throw new IllegalArgumentException("PRICE MUST BE GREATER THAN ZERO");
+            }
             return new Property(this);
         }
+
+        public Property garage(double v) {
+            this.garage =garage;
+            return this.build();
+        }
     }
-}
+
+    @Override
+    public String toString() {
+        return "Property {" +
+                "propertyId=" + propertyId + '/' + ", address= " + address + '/' + ", price = " + price + ", bedrooms=" + bedrooms + ",Kitchen" + kitchen + ", garage" + garage + ", propertyType=" + propertyType + '/' + ", status=" + status + '/' + '}';
+
+
+    }
+
+
+    }
+
+
+
+
+
+
