@@ -1,5 +1,19 @@
 <img width="2577" height="3174" alt="Uml" src="https://github.com/user-attachments/assets/8eede903-f93c-4fce-8b65-ea5a0ad422b0" />
 
+
+# 🏠 Real Estate Management System
+
+## 📋 Project Overview
+A real estate management system built using Java with Domain-Driven Design principles. The system manages properties, agents, clients, viewings, and inspections.
+
+## 👥 Team Members
+| Name | Student Number | GitHub | Responsibilities |
+|------|---------------|--------|------------------|
+| [Paul ] | 220000001 | [kleinworthfx](https://github.com/kleinworthfx)) | Inspection Domain, Project Setup |
+| [Mfanafuth] | 220000002 | [Mfanafuthi12345](https://github.com/Mfanafuthi12345) | Viewing Domain |
+| [Member 3 Name] | 220000003 | [Sinoxolo23](https://github.com/Sinoxolo23) | Agent Domain |
+| [Member 4 Name] | 220000004 | [230231802](https://github.com/230231802) | Client Domain |
+| [Member 5 Name] | 220000005 | [@username](https://github.com) | Property Domain |
 ## 📅 Milestones
 
 | Milestone           | Due Date      | Status       |
