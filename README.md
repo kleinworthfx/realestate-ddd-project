@@ -9,7 +9,7 @@ A real estate management system built using Java with Domain-Driven Design princ
 ## 👥 Team Members
 | Name | Student Number | GitHub | Responsibilities |
 |------|---------------|--------|------------------|
-| Paul Khumalo | 230108547 | [kleinworthfx](https://github.com/kleinworthfx)) | Inspection Domain, Project Setup |
+| Paul Khumalo | 230108547 | [kleinworthfx](https://github.com/kleinworthfx) | Inspection Domain, Project Setup |
 | Mfanafuthi Khumalo | 230018270 | [Mfanafuthi12345](https://github.com/Mfanafuthi12345) | Viewing Domain |
 | Sinoxolo Kobeni | 230801846 | [Sinoxolo23](https://github.com/Sinoxolo23) | Agent Domain |
 | Khonzinkosi Khumalo | 230231802 | [230231802](https://github.com/230231802) | Client Domain |
